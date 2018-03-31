@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nasaブログ</title>
-    <link>http://example.org/</link>
+    <link>https://k-nasa.github.io/</link>
     <description>Recent content on nasaブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 30 Mar 2018 00:44:46 +0900</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://k-nasa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Vue_memo</title>
-      <link>http://example.org/post/vue_memo/</link>
+      <link>https://k-nasa.github.io/post/vue_memo/</link>
       <pubDate>Fri, 30 Mar 2018 00:44:46 +0900</pubDate>
       
-      <guid>http://example.org/post/vue_memo/</guid>
+      <guid>https://k-nasa.github.io/post/vue_memo/</guid>
       <description>Vue.jsについてのメモ https://jp.vuejs.org/v2/guide/ これをもとにメモ vueインスタンス データとメソッド var obj = { foo: &#39;bar&#39; } Object.freeze(obj) new Vue({ el: &#39;#app&#39;, data: obj }) Object.freeze(obj) とすることでvueリアクティブ</description>
     </item>
     
