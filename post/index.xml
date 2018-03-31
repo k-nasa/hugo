@@ -6,10 +6,19 @@
     <description>Recent content in Posts on nasaブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 30 Mar 2018 00:44:46 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 31 Mar 2018 17:57:38 +0900</lastBuildDate>
     
 	<atom:link href="https://k-nasa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Http_status</title>
+      <link>https://k-nasa.github.io/post/http_status/</link>
+      <pubDate>Sat, 31 Mar 2018 17:57:38 +0900</pubDate>
+      
+      <guid>https://k-nasa.github.io/post/http_status/</guid>
+      <description>ステータスコード早見表 1xx: 処理中 処理が継続している状態。 クライアントはリクエストを継続するか、再送信する 2xx 成功 リクエストが成功した 3xx リダイレク</description>
+    </item>
     
     <item>
       <title>Vue_memo</title>
