@@ -6,10 +6,19 @@
     <description>Recent content on nasaブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 31 Mar 2018 18:02:42 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 31 Mar 2018 18:17:43 +0900</lastBuildDate>
     
 	<atom:link href="https://k-nasa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>オブジェクト指向設計実践ガイドのメモ</title>
+      <link>https://k-nasa.github.io/post/object_design_guid_memo/</link>
+      <pubDate>Sat, 31 Mar 2018 18:17:43 +0900</pubDate>
+      
+      <guid>https://k-nasa.github.io/post/object_design_guid_memo/</guid>
+      <description>オブジェクト指向設計実践ガイドのメモ 適当にいいと思ったフレーズや思ったことのメモ 「設計がされてない」アプリケーションは自身を破壊する 今すぐに</description>
+    </item>
     
     <item>
       <title>Poemu</title>

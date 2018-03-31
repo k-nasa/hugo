@@ -8,7 +8,7 @@
 
 <meta name="description" content="">
 
-<title>Http_status</title>
+<title>オブジェクト指向設計実践ガイドのメモ</title>
 <meta name="generator" content="Hugo 0.37.1" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/pojoaque.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
@@ -27,7 +27,7 @@
         <h3 data-open="last-posts">nasaブログ - Most recent posts</h3>
         <ul>
             
-            <li><a href="https://k-nasa.github.io/post/object_design_guid_memo/">オブジェクト指向設計実践ガイドのメモ</a></li>
+            <li><a href="https://k-nasa.github.io/post/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E8%A8%AD%E8%A8%88%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89%E3%81%AE%E3%83%A1%E3%83%A2/">オブジェクト指向設計実践ガイドのメモ</a></li>
             
             <li><a href="https://k-nasa.github.io/post/poemu/">Poemu</a></li>
             
@@ -46,8 +46,8 @@
 </div>
 <div class="col-md-9 content">
 
-<h1>Http_status</h1>
-<h4>Published 03-31-2018 17:57:38</h4>
+<h1>オブジェクト指向設計実践ガイドのメモ</h1>
+<h4>Published 03-31-2018 18:17:43</h4>
 
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="kendo5731"></a>
 <script>!function (d, s, id) {
@@ -60,7 +60,7 @@
     }
 }(document, 'script', 'twitter-wjs');</script>
 
-<div class="fb-share-button" data-href="https://k-nasa.github.io/post/http_status/" data-layout="button"></div>
+<div class="fb-share-button" data-href="https://k-nasa.github.io/post/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E8%A8%AD%E8%A8%88%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89%E3%81%AE%E3%83%A1%E3%83%A2/" data-layout="button"></div>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -73,45 +73,23 @@
 <article>
     
 
-<h2 id="ステータスコード早見表">ステータスコード早見表</h2>
+<h1 id="オブジェクト指向設計実践ガイドのメモ">オブジェクト指向設計実践ガイドのメモ</h1>
 
-<h3 id="1xx-処理中">1xx: 処理中</h3>
+<p>適当にいいと思ったフレーズや思ったことのメモ</p>
 
-<p>処理が継続している状態。</p>
+<p>&lt; 「設計がされてない」アプリケーションは自身を破壊する</p>
 
-<p>クライアントはリクエストを継続するか、再送信する</p>
+<p>今すぐにアプリケーションを動かす必要があるのは最初の一度だけだが,変更の容易さは保つ必要がある。</p>
 
-<h3 id="2xx-成功">2xx 成功</h3>
+<p>そうじゃないと、機能追加のたびにヒイヒイ言うことになると思う。</p>
 
-<p>リクエストが成功した</p>
+<p>変更が簡単なコードは次のようにあるべきらしい
+- 見通しが良い 変更の影響がどのに及ぶのか明確
+- 合理性 変更にかかるコストは変更による利益にふさわしい
+- 利用性が高い 新しい環境でも再利用できる。また予期していない環境でも再利用できる
+- 模範的 コードに変更を加える人が、上記の品質を保つようなコードになっている</p>
 
-<h3 id="3xx-リダイレクト">3xx リダイレクト</h3>
-
-<p>他のリソースへのリダイレクト。</p>
-
-<p>クライアントはこのステータスコードを受け取ると、レスポンスメッセージを見て新しいリソースへ接続する。</p>
-
-<h3 id="4xx-クライアントエラー">4xx クライアントエラー</h3>
-
-<p>クライアントのリクエストに原因がある。
-エラーを解消しない限り正常な結果が得られないので、同じリクエストをそのまま再送信できない。</p>
-
-<h3 id="5xx-サーバーエラー">5xx サーバーエラー</h3>
-
-<p>サーバー側に原因がある。</p>
-
-<h2 id="よく使われるステータスコード">よく使われるステータスコード</h2>
-
-<ul>
-<li>200 リクエスト成功</li>
-<li>201 リソース作成成功</li>
-<li>301 Moved Permanently リソースの移動　(リソースが新しいURLに移動したことを示す)</li>
-<li>400 Bad Request リクエスト構文やパラメータの間違い</li>
-<li>401 Unauthorized アクセス権不正</li>
-<li>404 Not Found 一番見るやつ。リソースの不在</li>
-<li>500 Internal Server Error サーバー内部エラー</li>
-<li>503 Service Unavailable サービス停止</li>
-</ul>
+<p>comming soon&hellip;</p>
 
 </article>
 
