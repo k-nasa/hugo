@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+    <base href="/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="author" content="John Doe">
+
+<meta name="description" content="">
+
+<title>Poemu</title>
+<meta name="generator" content="Hugo 0.37.1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/pojoaque.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+<link  href="https://k-nasa.github.io//css/theme.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="page-container container-fluid">
+<div class="col-md-3 menu">
+    <nav class="col-md-3">
+    <h3 class="home-link"><a href="https://k-nasa.github.io/">Root</a></h3>
+    <div id="last-posts" class="open">
+        <h3 data-open="last-posts">nasaブログ - Most recent posts</h3>
+        <ul>
+            
+            <li><a href="https://k-nasa.github.io/post/poemu/">Poemu</a></li>
+            
+            <li><a href="https://k-nasa.github.io/post/http_status/">Http_status</a></li>
+            
+            <li><a href="https://k-nasa.github.io/post/vue_memo/">Vue_memo</a></li>
+            
+        </ul>
+    </div>
+
+    
+
+    
+</nav>
+
+</div>
+<div class="col-md-9 content">
+
+<h1>Poemu</h1>
+<h4>Published 03-31-2018 18:02:42</h4>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="kendo5731"></a>
+<script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, 'script', 'twitter-wjs');</script>
+
+<div class="fb-share-button" data-href="https://k-nasa.github.io/post/poemu/" data-layout="button"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en-US/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<article>
+    
+
+<h1 id="インターン課題の振り返り-ポエム">インターン課題の振り返り [ポエム]</h1>
+
+<p>今日（３月２６日）インターン先に出してもらっている課題が終了しました。</p>
+
+<p>webアプリ作成を通して、Rails、web開発の基礎を叩き込むという目的でこの課題に取り組みました。</p>
+
+<p>最小限の要件が与えられ、あとは自分でいいアプリ（使いやすい、良い機能を持った）を作ってね。という感じでした。</p>
+
+<p>どんなアプリを作ったのかについては書きませんが、出来栄え、作っての感想などを書いていきます。</p>
+
+<h2 id="出来栄え">出来栄え</h2>
+
+<p>まず、出来栄えですが。一言で言うと、** 綺麗なうんこが出来ました。 ** （泣）</p>
+
+<p>どういうことかというと、フロントの見栄えはそこそこ良く出来ましたが、ユースケースを考えてなく、すごく使いづらい and  欲しい機能がない、要らない機能があるなど、とても使い物にならないウンコみたいなアプリが完成してしまいました（完成とは？）</p>
+
+<p>これが課題だったので良かったのもも（外部に出ないので）人に使ってもらうものだったらバッシングの嵐だったと思います。</p>
+
+<p>実際、インターン先の人に使ってもらった結果、いい評判は聞けませんでした。</p>
+
+<p>優しい人ばかりなので、フォローしてくれるのですがそれが逆に辛い、、、、</p>
+
+<p>では、何がいけなかったのでしょうか？</p>
+
+<p>コードレビューをしてもらっていたこともあり、コードの質ばかりに気を取られていたと思います。</p>
+
+<p>ユーザーにとって裏でどんなコードが動いているかなんてどうでもいいのに、、、、</p>
+
+<p>それから、フロントをいい感じに表示して、「この画面キレイ！ワハハ！」という自己満足に浸っていました。</p>
+
+<p>きれいな画面というだけであって、UIが使いやすいと言うわけではなく、そこを履き違えたまま作ってしまったな〜と思います。</p>
+
+<p>書いていて辛くなってきましたが、感想にいきたいと思います。</p>
+
+<h2 id="感想">感想</h2>
+
+<p>課題として出された要件が非常にいい難易度になってると思いました。</p>
+
+<p>簡単そうに見えて、意外と考えるところ、詰まるところがありました。（バリデーションが不十分だったり）</p>
+
+<p>やばい、他に感想が出てこない、、、</p>
+
+<h2 id="今後の抱負">今後の抱負</h2>
+
+<p>アプリ作りはちゃんとしたものを作ろうとすると、結構な時間がかかってしまいます。実装力にもよりけりですが、、、</p>
+
+<p>そして、やっぱり時間がかかっているぶん愛着も湧いてきます。</p>
+
+<p>作ってる側からすると、意外と使いづらいことに気づかないまま、実装を進めてしまうこともあり、気づいたら我が子のように可愛いアプリが、ウンコになっているということがあるのかな〜と思いまいした。</p>
+
+<p>今後は、我が子をウンコにしないようにしたいですね。</p>
+
+<p>試作段階で、色んな人（友達、同僚）にヒアリングをしていくのが、一番簡単な策のような気がします。</p>
+
+<p>やっぱり人に使ってもらうのが一番ですね。</p>
+
+<p>あと、変更に強くしておくと、使いづらいな〜と思ったときに修正が楽になり、ウンコにならなくて済む可能性が上がりそうです。</p>
+
+<p>修正が面倒だと、諦めてしまいそう、、、</p>
+
+<p>ということで、まとめ！！</p>
+
+<p>** ヒアリングをする **</p>
+
+<p>雑なまとめですが以上、、、</p>
+
+</article>
+
+
+
+</div>
+</div>
+<script src="https://k-nasa.github.io//js/theme.min.js" type="text/javascript"></script>
+
+
+</body>
+</html>
+
