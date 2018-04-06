@@ -8,7 +8,7 @@
 
 <meta name="description" content="">
 
-<title>Http_status</title>
+<title>Started_haskell</title>
 <meta name="generator" content="Hugo 0.37.1" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/pojoaque.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
@@ -48,8 +48,8 @@
 </div>
 <div class="col-md-9 content">
 
-<h1>Http_status</h1>
-<h4>Published 03-31-2018 17:57:38</h4>
+<h1>Started_haskell</h1>
+<h4>Published 04-06-2018 23:44:20</h4>
 
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="kendo5731"></a>
 <script>!function (d, s, id) {
@@ -62,7 +62,7 @@
     }
 }(document, 'script', 'twitter-wjs');</script>
 
-<div class="fb-share-button" data-href="https://k-nasa.github.io/post/http_status/" data-layout="button"></div>
+<div class="fb-share-button" data-href="https://k-nasa.github.io/post/started_haskell/" data-layout="button"></div>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -75,45 +75,47 @@
 <article>
     
 
-<h2 id="ステータスコード早見表">ステータスコード早見表</h2>
+<h1 id="すごいh本を読んでのメモ">すごいH本を読んでのメモ</h1>
 
-<h3 id="1xx-処理中">1xx: 処理中</h3>
+<p>関数名にはアポストロフィをつけることが出来る
+習慣的にアポストロフィは正格版の関数や、少し変更したバージョンの関数に利用される</p>
 
-<p>処理が継続している状態。</p>
+<h2 id="リスト連結">リスト連結</h2>
 
-<p>クライアントはリクエストを継続するか、再送信する</p>
+<pre><code>[1,2,3,4,5] ++ [1,2]
+&gt; [1,2,3,4,5,1,2]
 
-<h3 id="2xx-成功">2xx 成功</h3>
+&quot;hello&quot; ++ &quot; &quot; ++ &quot;world&quot;
+&quot;hello word&quot;
+</code></pre>
 
-<p>リクエストが成功した</p>
+<p>文字列は文字のリストとして表されている</p>
 
-<h3 id="3xx-リダイレクト">3xx リダイレクト</h3>
+<p>リストの先頭に追加したい場合は:演算子を使う</p>
 
-<p>他のリソースへのリダイレクト。</p>
+<pre><code>5:[1,2,3,4]
+&gt; [5,1,2,3,4]
+</code></pre>
 
-<p>クライアントはこのステータスコードを受け取ると、レスポンスメッセージを見て新しいリソースへ接続する。</p>
+<h2 id="レンジ">レンジ</h2>
 
-<h3 id="4xx-クライアントエラー">4xx クライアントエラー</h3>
+<p>10から1までの減少列を作るには<code>[10..1]</code>ではなく<code>[10,9..1]</code>と書く必要がある</p>
 
-<p>クライアントのリクエストに原因がある。
-エラーを解消しない限り正常な結果が得られないので、同じリクエストをそのまま再送信できない。</p>
+<h2 id="リスト内包表記">リスト内包表記</h2>
 
-<h3 id="5xx-サーバーエラー">5xx サーバーエラー</h3>
+<pre><code>[x, y | x &lt;- [2,5,10], y &lt;- [8,10,11], x*y &gt; 50]
+&gt; [55,80,100,110]
+</code></pre>
 
-<p>サーバー側に原因がある。</p>
+<p>x,yに値を束縛したあと,述語を追加するだけ</p>
 
-<h2 id="よく使われるステータスコード">よく使われるステータスコード</h2>
+<h2 id="型を信じろ">型を信じろ</h2>
 
-<ul>
-<li>200 リクエスト成功</li>
-<li>201 リソース作成成功</li>
-<li>301 Moved Permanently リソースの移動　(リソースが新しいURLに移動したことを示す)</li>
-<li>400 Bad Request リクエスト構文やパラメータの間違い</li>
-<li>401 Unauthorized アクセス権不正</li>
-<li>404 Not Found 一番見るやつ。リソースの不在</li>
-<li>500 Internal Server Error サーバー内部エラー</li>
-<li>503 Service Unavailable サービス停止</li>
-</ul>
+<p>引数と返り値の型は -&gt; で区切る。
+どれも -&gt; で区切っている理由は５章でわかるらしい。
+早く５章まで読もう、、、</p>
+
+<p>coming soon&hellip;</p>
 
 </article>
 
