@@ -17,7 +17,7 @@
       <pubDate>Fri, 06 Apr 2018 23:44:20 +0900</pubDate>
       
       <guid>https://k-nasa.github.io/post/started_haskell/</guid>
-      <description>すごいH本を読んでのメモ 関数名にはアポストロフィをつけることが出来る 習慣的にアポストロフィは正格版の関数や、少し変更したバージョンの関数に利</description>
+      <description>すごいH本まとめ 第一章 はじめの一歩 中置関数 Haskellでは中置関数と言うものがあり、左右に引数を取って実行できる `(バッククォート?)で囲</description>
     </item>
     
     <item>
