@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+<head>
+    <base href="/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="author" content="John Doe">
+
+<meta name="description" content="">
+
+<title>リファクタリング・ウェットウェアを読んで</title>
+<meta name="generator" content="Hugo 0.37.1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/pojoaque.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+<link  href="https://k-nasa.github.io//css/theme.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="page-container container-fluid">
+<div class="col-md-3 menu">
+    <nav class="col-md-3">
+    <h3 class="home-link"><a href="https://k-nasa.github.io/">Root</a></h3>
+    <div id="last-posts" class="open">
+        <h3 data-open="last-posts">nasaブログ - Most recent posts</h3>
+        <ul>
+            
+            <li><a href="https://k-nasa.github.io/post/%E7%A5%9E%E6%99%82%E9%96%93%E8%A1%93/">神時間術</a></li>
+            
+            <li><a href="https://k-nasa.github.io/post/started_haskell/">Started_haskell</a></li>
+            
+            <li><a href="https://k-nasa.github.io/post/object_design_guid_memo/">オブジェクト指向設計実践ガイドのメモ</a></li>
+            
+            <li><a href="https://k-nasa.github.io/post/poemu/">Poemu</a></li>
+            
+            <li><a href="https://k-nasa.github.io/post/http_status/">Http_status</a></li>
+            
+            <li><a href="https://k-nasa.github.io/post/rifactaring/">リファクタリング・ウェットウェアを読んで</a></li>
+            
+            <li><a href="https://k-nasa.github.io/post/vue_memo/">Vue_memo</a></li>
+            
+        </ul>
+    </div>
+
+    
+
+    
+</nav>
+
+</div>
+<div class="col-md-9 content">
+
+<h1>リファクタリング・ウェットウェアを読んで</h1>
+<h4>Published 03-31-2018 17:57:38</h4>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="kendo5731"></a>
+<script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, 'script', 'twitter-wjs');</script>
+
+<div class="fb-share-button" data-href="https://k-nasa.github.io/post/rifactaring/" data-layout="button"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en-US/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<article>
+    
+
+<h1 id="リファクタリング-ウェットウェアを読んで">リファクタリング・ウェットウェアを読んで</h1>
+
+<p>本を再読する手間を省きたいのでここに色々とメモしていく
+まだ読んでいる途中</p>
+
+<h2 id="まえがき">まえがき</h2>
+
+<p>気は地面に立っている、独立した一つの物体と見ることもできますが、実際には２つのシステムをつなぐ存在です。
+つまり、根と土、葉と空気という２つの処理リサイクルをつなぐ存在。</p>
+
+<p><strong>周囲の状況や文脈を必ず考慮にいれること</strong></p>
+
+<p>これは大事らしい。あとで触れる</p>
+
+<h2 id="１章-初心者から達人へ">１章　初心者から達人へ</h2>
+
+<blockquote>
+<p>問題を生み出したときと同じような考え方ではその問題を解決することはできない。
+-アルバート・アインシュタイン</p>
+</blockquote>
+
+<h3 id="ドレイファストモデル">ドレイファストモデル</h3>
+
+<h4 id="第1段階-初心者">第1段階　初心者</h4>
+
+<p>レシピが必要  経験をほとんど持たない</p>
+
+<p>コンテクストに左右されないルールが与えられれば仕事を遂行できる</p>
+
+<p>学びたい意欲はそれほどない</p>
+
+<h4 id="第2段階-中級者">第2段階　中級者</h4>
+
+<p>全体像を見たがらない 独力で仕事に当たれるが問題処理に手こずる</p>
+
+<p>ほんの少しだけ決まったルールから離れられる</p>
+
+<p>情報を手早く入手したがるが、理論・原則は望まない（私には関係ない）</p>
+
+<h4 id="第3段階-上級者">第3段階　上級者</h4>
+
+<p>問題解決ができる    問題を探し出し解決する、但し細部のどの部分に焦点を合わせるべきかの決定にはさらなる経験が必要</p>
+
+<p>チームの指導者的役割、初心者への助言、達人のサポート</p>
+
+<h4 id="第4段階-熟練者">第4段階　熟練者</h4>
+
+<p>自己補正が可能     十分な経験と判断力を備える</p>
+
+<p>自己改善、他人の経験から学ぶ、格言を理解しうまく適用する能力を備える（例：パターンを効果的に適用）</p>
+
+<p>何が失敗につながるか分かる</p>
+
+<h4 id="第5段階-達人">第5段階　達人</h4>
+
+<p>直感で動く   膨大な経験があり、上手に引き出しぴったりの状況で応用できる。理由があってそうするのではなく、直感に従って行う（「正しいと感じた」）</p>
+
+<p>本質に関係のない部分と重要な部分の区別が無意識下でできる</p>
+
+<h3 id="二次無能力">二次無能力</h3>
+
+<p>熟練していない人のほうが、「自分はかなりのエキスパートである」と思い込んでしまう傾向にある。</p>
+
+<p>性格な自己評価が欠如していること、つまり未熟でありながらそれに気づかないことを「二次無能力」という。</p>
+
+<p>例.
+白昼に銀行強盗を働いた泥棒が、レモン汁を顔につければ監視カメラに映らないと本気で思っていたらしく、これを信じて、銀行強盗をしました。すると、当然、すぐに警察に逮捕されてしまいました。</p>
+
+<p>逮捕されても、銀行強盗は、なぜ自分がすぐに捕まってしまったかを理解できず、自分が監視カメラに写っていたという事実を、すぐに受け入れなかった。</p>
+
+<h2 id="２章-脳の構造">２章　脳の構造</h2>
+
+<h3 id="自分でできる脳の手術">自分でできる脳の手術</h3>
+
+<p>ビデオカメラの出力を、１６ｘ１６ピクセルという小さい形で目の見えない患者の舌に接続しました。</p>
+
+<p>患者の脳の回路は、下の神経による入力をもとに視覚の処理を行うよう、ひとりでに配線し直され、患者はなんと駐車場でコーンを避けて運転できるまでになりました。</p>
+
+<p>信じて訓練を続けることで脳を配線し直す事ができる。</p>
+
+<p>脳の持つ能力について、思ったことが脳自体の配線に物理的に影響しています。</p>
+
+<p>自分の脳は、より多くを学べると <strong>思うだけで、そうなるのです。</strong></p>
+
+<p>これが <strong>自分でできる脳の手術というわけだ。</strong></p>
+
+<h2 id="３章-rモードへの転換">３章　Rモードへの転換</h2>
+
+<p>脳のより多くの部分を動員するためには関与する感覚を増やす</p>
+
+<h3 id="rモードからlモードへの流れを作る">RモードからLモードへの流れを作る</h3>
+
+<p>比喩は言語表現とイメージの双方にとって共通の場であり、潜在意識と意識の間、右脳と左脳の間を行き来する手段を与えてくれるものです。</p>
+
+<h4 id="ランダム並置">ランダム並置</h4>
+
+<p>自分の関心領域から人るの単語を取り出し、全く関係のない単語と結合させます。
+たとえば、「タバコ」と「信号」。
+タバコと信号は「禁煙の助けになるようタバコの上に赤いゴム輪をかける」という風に融合できます。（ちょっと意味が分からん）</p>
+
+<h3 id="rモードの出力を手に入れる">Rモードの出力を手に入れる</h3>
+
+<h4 id="イメージストリーミング">イメージストリーミング</h4>
+
+<p>基本的には心の中のイメージを意識的に観察する、つまりイメージを注視して、心の中で少しその無機を変えてみる、という手法。</p>
+
+<p>まず、自分で自分に問題を出してみて（質問でも）それから１０分ほど目を閉じます。
+イメージが浮かんでくるたびに次のことをしましょう。</p>
+
+<ol>
+<li>イメージに目を向け細かいところまで見るようにする</li>
+<li>声に出してそれを説明する。（ <strong>本当に声を出す</strong> ）</li>
+<li>五感を総動員してイメージを思い浮かべる</li>
+<li>イメージが消えてしまったとしても、現在形で説明する</li>
+</ol>
+
+<h4 id="モーニングページ">モーニングページ</h4>
+
+<ul>
+<li>モーニングページは <strong>朝一番</strong> に書くこと。起きたらまずなにをするよりも速く書く</li>
+<li>3ページは書くこと。 <strong>手書きで書くことが重要</strong></li>
+<li>自分の書いた内容をチェックしないこと。素晴らしいアイディアも陳腐なアイディアも書き出す</li>
+<li>毎日書くこと　間に休みの日を入れないこと</li>
+</ul>
+
+<h3 id="早速実行">早速実行</h3>
+
+<h4 id="新しい習慣">新しい習慣！</h4>
+
+<ul>
+<li>最低二週間はモーニングページを続ける</li>
+<li>頭の回転を早くするようにする。無関係な物事のつながりや類似性を探してみましょう</li>
+<li>難問にぶつかったら、五感を総動員してみる。どの感覚が自分にとって役に立ったかを考える</li>
+<li>普段読むものとは違ったものを読んで見る</li>
+<li>レストランで食べたことがないものを頼む</li>
+<li>問題に直面するたびに、それを別の角度から見てみる。裏側から見てどんなことが分かるでしょう。</li>
+</ul>
+
+<h2 id="4章-頭をデバッグ">4章　頭をデバッグ</h2>
+
+<p>脳の4つのバグ
+1. 認知バイアス：考えが横道に逸らされてしまう
+2. 世代類似性：時代に影響を受けてしまう
+3. 性格的傾向：性格によって思考が影響される
+4. ハードウェア的バグ：古い脳の部分が、より優秀な部分より優位に立つ</p>
+
+<h3 id="自己テスト">自己テスト</h3>
+
+<p>あることに関して絶対の確信があるときでも、「それはなぜか」と自問しましょう。
+次のような質問を自分にしてみましょう。より大きな視野を得、自分の理解とメンタルモデルを検証する上で効果的です。
++ どうしてそうだと分かるのか
++ 誰がそう言っているのか
++ どれだけ具体的に
++ 今していることが自分に影響しているか
++ なにと、あるいは何と比べて
++ 自分が&hellip;をしない理由は</p>
+
+<h2 id="５章-意識的な学び">５章　意識的な学び</h2>
+
+<h3 id="smartな目標を立てる">SMARTな目標を立てる</h3>
+
+<p>####Specific(具体的)
+目標は具体的に.
+「railsを学びたい」と言うだけでは不十分です。
+「railsを使って動的にコンテンツを生成するWebサーバが作りたい」というように具体的な内容に落とし込むのです。</p>
+
+<h4 id="measurable-測定可能">Measurable(測定可能)</h4>
+
+<p>どうしたら、いつ何を成し遂げたと分かるでしょう？
+目標が測定できないなら、おそらくその目標は十分に具体的ではないのでしょう。</p>
+
+<h4 id="achievable-達成可能">Achievable(達成可能)</h4>
+
+<p>次の目標は「今」自分がいる位置から見て達成可能なものを設定してください。</p>
+
+<h4 id="relevant-適切">Relevant(適切)</h4>
+
+<p>それは自分にとってほんとうに意味のあることですか？
+自分にとって大切であり熱中できることですか？
+<strong>さらに自分で管理できることですか</strong>
+そうでなければその目標は適切ではありません</p>
+
+<h4 id="time-boxed-期間を定める">Time-boxed(期間を定める)</h4>
+
+<p>期間がなければ目的は色あせ、脇へと追いやられてしまいます。</p>
+
+<h3 id="プラグマティック投資計画の作成">プラグマティック投資計画の作成</h3>
+
+<p>どんな目的を目指すにしろ、計画を「立てる」だけで驚くほど効果があります。多くの人は学習計画をたてることを怠りがちです。
+暇なときや空き時間に学習する予定なのでしょうか。
+残念ながら、学習科駆動を「空き時間」に回すのは失敗の元です。実際には「空き時間」などありません。時間はあっという間に埋まってしまいます。
+時間は作り出したり破棄したりすることはできません。 <strong>配分する</strong>事ができるだけです</p>
+
+<h3 id="定期的に投資する">定期的に投資する</h3>
+
+<p>最低限の時間を投資すると決めることです。
+図書館へ行ったり、無線LANがある喫茶店に行ったりしましょう。その時間すべてが等しく生産的になるとは限りませんが、定期的に予定に組み込むことで <strong>長い目で見るとうまくいくでしょう</strong>
+逆に、時間が出来るまで待ったり、天から声が降ってくるのを待ったりしても、そんなことは決して起きません。</p>
+
+<h3 id="sq3rで意識的に本を読む">SQ3Rで意識的に本を読む</h3>
+
+<ol>
+<li>調査（Survey）　全体の要旨をつかむため、目次と各章の要約を流し読みする</li>
+<li>質問（Question）　質問点を書き出す</li>
+<li>読書（Read） 全文読む</li>
+<li>復唱（Recite）要約し、ノートに書き、ポイントを自分の言葉でまとめる</li>
+<li>まとめ（Review） もう一度読み、更にノートに書き出し、仲間と議論する</li>
+</ol>
+
+</article>
+
+
+
+</div>
+</div>
+<script src="https://k-nasa.github.io//js/theme.min.js" type="text/javascript"></script>
+
+
+</body>
+</html>
+

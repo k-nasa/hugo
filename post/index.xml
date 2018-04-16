@@ -6,10 +6,19 @@
     <description>Recent content in Posts on nasaブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 06 Apr 2018 23:44:20 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 16 Apr 2018 21:03:10 +0900</lastBuildDate>
     
 	<atom:link href="https://k-nasa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>神時間術</title>
+      <link>https://k-nasa.github.io/post/%E7%A5%9E%E6%99%82%E9%96%93%E8%A1%93/</link>
+      <pubDate>Mon, 16 Apr 2018 21:03:10 +0900</pubDate>
+      
+      <guid>https://k-nasa.github.io/post/%E7%A5%9E%E6%99%82%E9%96%93%E8%A1%93/</guid>
+      <description>神・時間術を読んで（題名ダサい） 神時間術という本を読んで思ったことや大事だと思ったことを書いていきます。 本はコチラ 序章 ４つの原則 第１原則 起き</description>
+    </item>
     
     <item>
       <title>Started_haskell</title>
@@ -45,6 +54,15 @@
       
       <guid>https://k-nasa.github.io/post/http_status/</guid>
       <description>ステータスコード早見表 1xx: 処理中 処理が継続している状態。 クライアントはリクエストを継続するか、再送信する 2xx 成功 リクエストが成功した 3xx リダイレク</description>
+    </item>
+    
+    <item>
+      <title>リファクタリング・ウェットウェアを読んで</title>
+      <link>https://k-nasa.github.io/post/rifactaring/</link>
+      <pubDate>Sat, 31 Mar 2018 17:57:38 +0900</pubDate>
+      
+      <guid>https://k-nasa.github.io/post/rifactaring/</guid>
+      <description>リファクタリング・ウェットウェアを読んで 本を再読する手間を省きたいのでここに色々とメモしていく まだ読んでいる途中 まえがき 気は地面に立っている</description>
     </item>
     
     <item>
