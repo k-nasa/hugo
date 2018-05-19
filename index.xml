@@ -6,10 +6,19 @@
     <description>Recent content on nasaブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 16 Apr 2018 21:03:10 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 19 May 2018 13:05:05 +0900</lastBuildDate>
     
 	<atom:link href="https://k-nasa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Googe_io</title>
+      <link>https://k-nasa.github.io/post/googe_io/</link>
+      <pubDate>Sat, 19 May 2018 13:05:05 +0900</pubDate>
+      
+      <guid>https://k-nasa.github.io/post/googe_io/</guid>
+      <description>Google IO報告会2018メモ overview GoogleIO概要で気になったやつ - material theming + material theme editor - developer communite大事 TensorFlowの話 ML -&amp;gt; App MLがあ</description>
+    </item>
     
     <item>
       <title>神時間術</title>

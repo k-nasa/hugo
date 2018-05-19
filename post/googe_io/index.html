@@ -8,7 +8,7 @@
 
 <meta name="description" content="">
 
-<title>オブジェクト指向設計実践ガイドのメモ</title>
+<title>Googe_io</title>
 <meta name="generator" content="Hugo 0.37.1" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/pojoaque.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
@@ -54,8 +54,8 @@
 </div>
 <div class="col-md-9 content">
 
-<h1>オブジェクト指向設計実践ガイドのメモ</h1>
-<h4>Published 03-31-2018 18:17:43</h4>
+<h1>Googe_io</h1>
+<h4>Published 05-19-2018 13:05:05</h4>
 
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="kendo5731"></a>
 <script>!function (d, s, id) {
@@ -68,7 +68,7 @@
     }
 }(document, 'script', 'twitter-wjs');</script>
 
-<div class="fb-share-button" data-href="https://k-nasa.github.io/post/object_design_guid_memo/" data-layout="button"></div>
+<div class="fb-share-button" data-href="https://k-nasa.github.io/post/googe_io/" data-layout="button"></div>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -81,28 +81,66 @@
 <article>
     
 
-<h1 id="オブジェクト指向設計実践ガイドのメモ">オブジェクト指向設計実践ガイドのメモ</h1>
+<h1 id="google-io報告会2018メモ">Google IO報告会2018メモ</h1>
 
-<p>適当にいいと思ったフレーズや思ったことのメモ</p>
+<h2 id="overview">overview</h2>
 
-<blockquote>
-<p>「設計がされてない」アプリケーションは自身を破壊する</p>
-</blockquote>
+<p>GoogleIO概要で気になったやつ
+- material theming
+  + material theme editor
+- developer communite大事</p>
 
-<p>今すぐにアプリケーションを動かす必要があるのは最初の一度だけだが,変更の容易さは保つ必要がある。</p>
+<h2 id="tensorflowの話">TensorFlowの話</h2>
 
-<p>そうじゃないと、機能追加のたびにヒイヒイ言うことになると思う。</p>
+<h3 id="ml-app">ML -&gt; App</h3>
 
-<p>変更が簡単なコードは次のようにあるべきらしい</p>
+<p>MLがあるから何かできるのではなくてアプリの１機能であるらしい</p>
+
+<h3 id="one-device-ml">one device ML</h3>
+
+<p>音声データなどをサーバに上げなくていいので通信量がry</p>
+
+<h3 id="tensorflowlite">TensorFlowLite</h3>
 
 <ul>
-<li>見通しが良い 変更の影響がどのに及ぶのか明確</li>
-<li>合理性 変更にかかるコストは変更による利益にふさわしい</li>
-<li>利用性が高い 新しい環境でも再利用できる。また予期していない環境でも再利用できる</li>
-<li>模範的 コードに変更を加える人が、上記の品質を保つようなコードになっている</li>
+<li>get a model
+-convert (tool)</li>
+<li>write ops 独自ハードの命令など</li>
+<li>write app</li>
 </ul>
 
-<p>comming soon&hellip;</p>
+<p>NNApiってのがないと出来ないっぽい。
+バードが頑張るみたい</p>
+
+<h2 id="ml-kit">ML Kit</h2>
+
+<p>モバイルでの機械学習
+TensorFlowLiteを動かすやつという認識でおｋ？
+アプリの１機能を担ってくれるので、UX向上出来るのかな？</p>
+
+<h2 id="browse-ml-tensorflow-js">browse ML(TensorFlow.js)</h2>
+
+<p>ブラウザ上でのML
+学習済みモデルをブラウザ上で使うのがメイン（今のところ）
+これから、ブラウザ上でも学習させよう！という感じらしい</p>
+
+<h2 id="web-front">web front</h2>
+
+<p>webには1月５０億アクセスが有る</p>
+
+<p>webの目標
+- もっとパフルに
+- ツール充実</p>
+
+<p>one tap sign up &amp; auto sign in gooleアカウントでsign up and sign in
+Web Authentication API 将来的には指紋でログイン
+Google Pay</p>
+
+<p>開発者向けのツール
+workbox service workerを楽に使う
+lighthouse webページの性能を点数化する
+WebComponents/ Polymer
+Puppeteer ヘッドレスブラウザ selemium的な？</p>
 
 </article>
 
